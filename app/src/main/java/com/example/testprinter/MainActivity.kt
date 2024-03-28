@@ -40,7 +40,6 @@ class MainActivity : AppCompatActivity() {
     private fun runMemoryLoad() {
         CoroutineScope(Dispatchers.IO).launch {
             launch {
-
                 val array = IntArray(1024*1024*5) { _ -> 0}
                 while (!isFinishing){
                     for (i in array.indices) {
@@ -53,10 +52,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
-
-
 }
+
+
 
 class Printer {
 
